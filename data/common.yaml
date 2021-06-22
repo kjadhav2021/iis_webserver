@@ -1,0 +1,11 @@
+---
+iis_webserver::webfeatures:
+  - 'Web-Server'
+  - 'Web-WebServer'
+  - 'Web-Mgmt-Console'
+  - 'Web-Mgmt-Tools'
+iis_webserver::iisfeatures:
+  - 'Web-WebServer'
+  - 'Web-Scripting-Tools'
+iis_webserver::dependency: 'Web-WebServer'
+
