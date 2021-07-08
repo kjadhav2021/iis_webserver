@@ -26,7 +26,7 @@ class iis_webserver::iis_site {
     }
     iis_site { 'basic-site':
       ensure          => 'started',
-      physicalpath    => 'c:/inetpub/basic',
+      physicalpath    => 'C:\\inetpub\\basic',
       applicationpool => 'basic_site_app_pool',
       require         => File['basic'],
       subscribe       => File['index.html'],
