@@ -10,7 +10,7 @@ class iis_webserver::iis_site {
       path   => 'c:/inetpub/basic',
     }
     archive { 'index.zip':
-      # path         => 'C:/inetpub/basic/index.zip',
+      path         => 'C:/tmppackage/index.zip',
       source       => 'https://gist.github.com/dylanratcliffe/af0e24303d241b888152bd1cd7c9063d/archive/ad273bebc01c6dac176da7a5f3c38c4d9a584521.zip',
       extract      => true,
       # extract_path => 'C:/inetpub/wwwroot/',
