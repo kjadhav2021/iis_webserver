@@ -7,7 +7,12 @@
 class iis_webserver::iis_site {
   file { 'basic':
     ensure => 'directory',
-    path   => 'c:/inetpub/basic',
+    path   => 'C:\\inetpub\\basic',
+    before => File['tmppackage'],
+  }
+  file { 'tmppackage':
+    ensure => 'directory',
+    path   => 'C:\\tmppackage',
     before => Archive['index.zip'],
   }
   archive { 'index.zip':
